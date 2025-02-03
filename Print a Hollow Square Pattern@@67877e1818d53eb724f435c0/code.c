@@ -7,8 +7,11 @@ int main() {
             if(i==0||i==n||j==0||j==n){
                 printf("* ");
             }
-            printf("\n");
+            else{
+                printf(" ");
+            }
         }
+        printf("\n");
     }
     return 0;
 }
