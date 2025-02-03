@@ -1,7 +1,4 @@
 #include <stdio.h>
-
-
-
 int main() {
     char c;
     scanf("%c",&c);
@@ -11,7 +8,8 @@ int main() {
     else if(c=='A'||c=='E'||c=='I'||c=='O'||c='U'){
         printf("Vowel");
     }
-    else if(a>='0'&&a<='9'){
+    
+    else if(c>='0'&&c<='9'){
         printf("Digit");
     }
     else{
