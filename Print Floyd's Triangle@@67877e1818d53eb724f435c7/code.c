@@ -9,10 +9,12 @@ int main() {
         for(int j=1;j<=i;j++){
             int k=p;
             printf("%d ",k);
-            k++;
+             k++;
+             p++;
         }
+        
         printf("\n");
-        p++;
+        
     }
     return 0;
 }
