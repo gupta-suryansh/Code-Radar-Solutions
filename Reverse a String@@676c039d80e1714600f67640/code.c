@@ -10,9 +10,6 @@ int main(){
         str[i]=b;
         str[strlen(str)-i-1]=a;
     }
-    for(int i=0;str[i]!='\n';i++){
-        printf("%s",str[i]);
-    }
-    
+    printf("%s",str);
     return 0;
 }
