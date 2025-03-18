@@ -6,13 +6,14 @@ int main(){
     char str[100],str2[100];
     scanf("%s",str);
     strcpy(str2,str);
-    for(int i=0;i<strlen(str)/2;i++){
+    int len=strlen(str);
+    for(int i=0;i<len/2;i++){
         int a=str[i];
         int b=str[strlen(str)-i-1];
         str[i]=b;
         str[strlen(str)-i-1]=a;
     }
-    if(str==str2){
+    if(strcmp(str,str2)==0){
         printf("Yes");
     }
     else{
