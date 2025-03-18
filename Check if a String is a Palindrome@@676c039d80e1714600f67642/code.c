@@ -4,8 +4,8 @@
 #include<string.h>
 int main(){
     char str[100],str2[100];
-    strcpy(str2,str);
     scanf("%s",str);
+    strcpy(str2,str);
     for(int i=0;i<strlen(str)/2;i++){
         int a=str[i];
         int b=str[strlen(str)-i-1];
