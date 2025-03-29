@@ -1,20 +1,23 @@
 #include<stdio.h>
 int peak(int n,int arr[],int a,int b,int c){
-    a=arr[0],b=arr[1],c=arr[2];
-    if(a<b&&b>c){
-        return 1;
+    if (arr[0] > arr[1]) {
+        return arr[0];
     }
-    else{
-        for(int i=3;i<n;i++){
-            a=arr[i-2];
-            b=arr[i-1];
-            c=arr[i];
-            if(a<b&&b>c){
-                return 1;
-            }
-            else return 0;
+
+    // Check for the last element being a peak
+    if (arr[n - 1] > arr[n - 2]) {
+        return arr[n - 1];
+    }
+
+    // Check for the peak in the middle of the array
+    for (int i = 1; i < n - 1; i++) {
+        if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1]) {
+            return arr[i];
         }
     }
+
+    return -1; // No peak found
+
 }
 int main(){
     int n,arr[100];
@@ -22,10 +25,11 @@ int main(){
     for(int i=0;i<n;i++){
         scanf("%d",&arr[i]);
     }
-    int a=arr[0],b=arr[1],c=arr[2];
-    // int a,b,c;
-    if(peak(n,arr,a,b,c)){
-        printf("%d",b);
+    int peakElement = peak(n, arr);
+    if (peakElement != -1) {
+        printf("Peak element: %d\n", peakElement);
+    } else {
+        printf("No peak element found\n");
     }
     return 0;
 }
