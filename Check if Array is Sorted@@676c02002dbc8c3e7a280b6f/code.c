@@ -1,0 +1,20 @@
+// Your code here...
+#include <stdio.h>
+int check(int n,int arr,int x){
+    for(int i=1;i<n;i++){
+        if(arr[i]>arr[i-1]){
+            return 1;
+        }
+        else return 0;
+    }
+}
+int main(){
+    int n,arr[100];
+    scanf("%d",&n);
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    if(check) printf("Sorted");
+    else printf("Not Sorted");
+    return 0;
+}
