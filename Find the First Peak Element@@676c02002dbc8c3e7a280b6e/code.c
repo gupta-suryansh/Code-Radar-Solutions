@@ -23,7 +23,7 @@ int main(){
         scanf("%d",&arr[i]);
     }
     if(peak(n,arr)){
-        printf("%d",*b);
+        printf("%d",&b);
     }
     return 0;
 }
