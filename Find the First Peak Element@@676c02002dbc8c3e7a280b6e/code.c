@@ -1,30 +1,34 @@
 #include<stdio.h>
 
-int peak(int n, int arr[]) {
-    // Check for the first element being a peak
-    if (arr[0] > arr[1]) {
-        return arr[0];
-    }
+int peak(int n, int arr[], int a, int b, int c) {
+    // Check the first three elements for a peak
+    a = arr[0];
+    b = arr[1];
+    c = arr[2];
+    
+    if (a < b && b > c) {
+        return 1; // Peak found at index 1 (b)
+    } else {
+        // Start checking from the 3rd element onwards
+        for (int i = 3; i < n; i++) {
+            a = arr[i - 2];
+            b = arr[i - 1];
+            c = arr[i];
 
-    // Check for the last element being a peak
-    if (arr[n - 1] > arr[n - 2]) {
-        return arr[n - 1];
-    }
-
-    // Check for the peak in the middle of the array
-    for (int i = 1; i < n - 1; i++) {
-        if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1]) {
-            return arr[i];
+            // If arr[i-1] is a peak
+            if (a < b && b > c) {
+                return 1; // Peak found at index i-1 (b)
+            }
         }
     }
 
-    return -1; // No peak found
+    return 0; // No peak found
 }
 
 int main() {
     int n, arr[100];
 
-    // Input number of elements
+    // Input the number of elements
     scanf("%d", &n);
 
     // Input the array elements
@@ -32,11 +36,14 @@ int main() {
         scanf("%d", &arr[i]);
     }
 
-    // Find and print the peak element
-    int peakElement = peak(n, arr);
-    if (peakElement != -1) {
-        printf("%d", peakElement);
-    } 
+    int a = arr[0], b = arr[1], c = arr[2];
+    
+    // Check if there's a peak
+    if (peak(n, arr, a, b, c)) {
+        printf("%d\n", b); // Print the peak element
+    } else {
+        printf("-1");
+    }
 
     return 0;
 }
