@@ -1,5 +1,5 @@
 #include<stdio.h>
-int peak(int n,arr[],int a,int b,int c){
+int peak(int n,int arr[],int a,int b,int c){
     a=arr[0],b=arr[1],c=arr[2];
     if(a<b&&b>c){
         return 1;
@@ -12,7 +12,7 @@ int peak(int n,arr[],int a,int b,int c){
             if(a<b&&b>c){
                 return 1;
             }
-            else return0;
+            else return 0;
         }
     }
 }
@@ -22,10 +22,10 @@ int main(){
     for(int i=0;i<n;i++){
         scanf("%d",&arr[i]);
     }
-    // int a=arr[0],b=arr[1],c=arr[2];
-    int a,b,c;
+    int a=arr[0],b=arr[1],c=arr[2];
+    // int a,b,c;
     if(peak(n,arr,a,b,c)){
-        printf("%d",&b);
+        printf("%d",b);
     }
     return 0;
 }
