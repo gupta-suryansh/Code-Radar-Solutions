@@ -1,6 +1,6 @@
 // Your code here...
 #include <stdio.h>
-int check(int n,int arr,int x){
+int check(int n,int arr[]){
     for(int i=1;i<n;i++){
         if(arr[i]>arr[i-1]){
             return 1;
