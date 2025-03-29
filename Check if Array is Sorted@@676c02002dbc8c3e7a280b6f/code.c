@@ -2,10 +2,10 @@
 #include <stdio.h>
 int check(int n,int arr[]){
     for(int i=1;i<n;i++){
-        if(arr[i]>arr[i-1]){
-            return 1;
+        if(arr[i]<arr[i-1]){
+            return 0;
         }
-        else return 0;
+        else return 1;
     }
 }
 int main(){
@@ -14,7 +14,7 @@ int main(){
     for(int i=0;i<n;i++){
         scanf("%d",&arr[i]);
     }
-    if(check) printf("Sorted");
+    if(check(n,arr)) printf("Sorted");
     else printf("Not Sorted");
     return 0;
 }
