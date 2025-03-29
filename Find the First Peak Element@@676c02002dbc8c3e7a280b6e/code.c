@@ -1,5 +1,7 @@
 #include<stdio.h>
-int peak(int n,int arr[],int a,int b,int c){
+
+int peak(int n, int arr[]) {
+    // Check for the first element being a peak
     if (arr[0] > arr[1]) {
         return arr[0];
     }
@@ -17,19 +19,24 @@ int peak(int n,int arr[],int a,int b,int c){
     }
 
     return -1; // No peak found
-
 }
-int main(){
-    int n,arr[100];
-    scanf("%d",&n);
-    for(int i=0;i<n;i++){
-        scanf("%d",&arr[i]);
+
+int main() {
+    int n, arr[100];
+
+    // Input number of elements
+    scanf("%d", &n);
+
+    // Input the array elements
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
     }
+
+    // Find and print the peak element
     int peakElement = peak(n, arr);
     if (peakElement != -1) {
-        printf("Peak element: %d\n", peakElement);
-    } else {
-        printf("No peak element found\n");
-    }
+        printf("%d", peakElement);
+    } 
+
     return 0;
 }
