@@ -7,7 +7,7 @@ int main(){
     for(int i=0;i<n;i++){
         scanf("%d",&arr[i]);
     }
-    if(n<2){
+    if(n<2&&n>0){
         printf("-1");
         return 0;
     }
@@ -20,6 +20,8 @@ int main(){
     }
     if(max2==INT_MIN){
         printf("-1");
+    }else{
+        printf("%d",max2);
     }
-    printf("%d",max2);
+    
 }
