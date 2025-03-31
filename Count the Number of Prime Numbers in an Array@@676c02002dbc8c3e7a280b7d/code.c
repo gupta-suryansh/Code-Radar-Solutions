@@ -7,13 +7,13 @@ int prime(int x){
     return 1;
 }
 int main(){
-    int n,int arr[100],count=0;
-    scanf("%d"&n);
+    int n,arr[100],count=0;
+    scanf("%d",&n);
     for(int i=0;i<n;i++){
         scanf("%d",&arr[i]);
     }
     for(int i=0;i<n;i++){
-        if(prime[arr[i]]) count++;
+        if(prime(arr[i])) count++;
     }
     printf("%d",count);
 }
