@@ -1,7 +1,7 @@
 // Your code here...
 #include<stdio.h>
 int main(){
-    int n,arr[100],even[];
+    int n,arr[100],even[100];
     scanf("%d",&n);
     for(int i=0;i<n;i++){
         scanf("%d",&arr[i]);
@@ -13,12 +13,11 @@ int main(){
             j++;
         }
     }
-    int len = sizeof(even)/sizeof(arr[0]);
-    if(sizeof(even)==0){
+    if(j==0){
         printf("-1");
     }
     else{
-        max=even[0]
+        int max=even[0];
         for(int i=0;i<j;i++){
             if(even[i]>max){
                 max=even[i];
