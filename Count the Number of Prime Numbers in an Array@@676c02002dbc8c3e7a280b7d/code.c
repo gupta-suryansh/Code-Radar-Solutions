@@ -6,7 +6,7 @@ int isPrime(int num) {
     if (num <= 1) {
         return 0; // Numbers less than or equal to 1 are not prime
     }
-    for (int i = 2; i <= sqrt(num); i++) {
+    for (int i = 2; i <=pow(num,1/2); i++) {
         if (num % i == 0) {
             return 0; // num is divisible by i, so it is not prime
         }
