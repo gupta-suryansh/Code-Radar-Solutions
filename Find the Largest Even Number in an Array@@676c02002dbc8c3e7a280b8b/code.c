@@ -14,6 +14,16 @@ int main(){
         }
     }
     int len = sizeof(even)/sizeof(arr[0]);
-        printf("%d ",len);
-    
+    if(sizeof(even)==0){
+        printf("-1");
+    }
+    else{
+        max=even[0]
+        for(int i=0;i<j;i++){
+            if(even[i]>max){
+                max=even[i];
+            }
+        }
+        printf("%d",max);
+    }   
 }
