@@ -1,7 +1,7 @@
 // Your code here...
 #include<stdio.h>
 int main(){
-    int n,arr[100],even[100];
+    int n,arr[100],even[];
     scanf("%d",&n);
     for(int i=0;i<n;i++){
         scanf("%d",&arr[i]);
@@ -14,7 +14,6 @@ int main(){
         }
     }
     int len = sizeof(even)/sizeof(arr[0]);
-    for(int i=0;i<len;i++){
-        printf("%d ",even[i]);
-    }
+        printf("%d ",len);
+    
 }
