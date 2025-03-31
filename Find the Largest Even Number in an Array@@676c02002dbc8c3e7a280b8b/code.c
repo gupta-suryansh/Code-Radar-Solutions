@@ -13,7 +13,8 @@ int main(){
             j++;
         }
     }
-    for(int i=0;i<n;i++){
+    int len = sizeof(even)/sizeof(arr[0]);
+    for(int i=0;i<len;i++){
         printf("%d ",even[i]);
     }
 }
