@@ -2,9 +2,9 @@
 #include<stdio.h>
 int check(int arr[100],int rev[100],int n){
     for(int i=0;i<n;i++){
-        if(arr[i]==rev[i]){
-            return 1;
-        }else return 0;
+        if(arr[i]!=rev[i]){
+            return 0;
+        }else return 1;
     }  
 }
 int main(){
