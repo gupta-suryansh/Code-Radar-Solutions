@@ -7,15 +7,18 @@ int main(){
         scanf("%d",&arr[i]);
     }
     for(int i=0;i<n;i++){
-        int sum=0,temp;
+        int sum=0,temp=arr[i];
         while(temp!=0){
             int a=temp%10;
             sum=sum*10+a;
             temp/=10;
         }
-        if(sum==arr[i]){
+        if(sum>=0){
+            if(sum==arr[i]){
             count++;
+            }
         }
+        
     }
     printf("%d",count);
 }
