@@ -13,7 +13,12 @@ int main(){
             sum+=a;
             temp/=10;
         }
-        arr[i]=sum;
+        if(sum<0){
+            arr[i]=-1*sum;
+        }else{
+            arr[i]=sum;
+        }
+        
     }
     for(int i=0;i<n;i++){
         printf("%d ",arr[i]);
