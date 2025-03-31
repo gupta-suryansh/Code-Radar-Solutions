@@ -14,14 +14,8 @@ int main(){
     for (int i=0;i<n;i++){
         scanf("%d",&arr[i]);
     }
-    for (int i=0;i<n;i++){
-        rev[i]=arr[i];
-    }
-    for(int i=0;i<n;i++){
-        int a=rev[i];
-        int b=rev[n-i-1];
-        rev[i]=b;
-        rev[n-i-1]=a;
+     for (int i = 0; i < n; i++) {
+        rev[i] = arr[n - i - 1];  // Reverse by directly copying from the other end
     }
      if(check(arr,rev,n)){
         printf("YES");
