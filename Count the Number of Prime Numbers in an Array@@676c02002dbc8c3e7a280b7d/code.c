@@ -1,40 +1,19 @@
 #include<stdio.h>
-#include<math.h>
-
-// Function to check if a number is prime
-int isPrime(int num) {
-    if (num <= 1) {
-        return 0; // Numbers less than or equal to 1 are not prime
+int prime(int x){
+    if(x<=1) return 0;
+    for(int i=2;i<x;i++){
+        if(x%i==0) return 0;
     }
-    for (int i = 2; i <=pow(num,1/2); i++) {
-        if (num % i == 0) {
-            return 0; // num is divisible by i, so it is not prime
-        }
-    }
-    return 1; // num is prime
+    return 1;
 }
-
-int main() {
-    int n, arr[100], count = 0;
-
-    // Input the size of the array
-    scanf("%d", &n);
-
-    // Input the elements of the array
-    for (int i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
+int main(){
+    int n,int arr[100],count=0;
+    scanf("%d"&n);
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
     }
-
-    // Check each number in the array if it is prime
-    for (int i = 0; i < n; i++) {
-        if (isPrime(arr[i])) {
-            count++; // Increment count if the number is prime
-        }
+    for(int i=0;i<n;i++){
+        if(prime[arr[i]]) count++;
     }
-
-    // Output the count of prime numbers
-    printf("%d", count);
-
-    return 0;
+    printf("%d",count);
 }
-
