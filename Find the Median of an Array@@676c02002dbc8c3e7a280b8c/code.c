@@ -1,4 +1,5 @@
 // Your code here...
+#include<stdio.h>
 int main(){
     int n,arr[n];
     scanf("%d",&n);
@@ -9,7 +10,7 @@ int main(){
         printf("%d",arr[n/2]);
     }
     else{
-        printf("%d",arr[n/2]+arr[(n/2)+1]);
+        printf("%d",(arr[n/2]+arr[(n/2)+1])/2);
     }
     return 0;
 }
