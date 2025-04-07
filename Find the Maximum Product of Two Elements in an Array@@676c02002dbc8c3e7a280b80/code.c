@@ -7,7 +7,7 @@ int main(){
         scanf("%d",&arr[i]);
     }
     for(int i=0;i<n;i++){
-        int prod=arr[i]*arr[j];
+        int prod=arr[i]*arr[n-i-1];
         for(int j=n;j>0;j++){
             
             if(prod>max){
